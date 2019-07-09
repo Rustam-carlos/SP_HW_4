@@ -1,0 +1,58 @@
+﻿<Window x:Name="FirstWindow" x:Class="SP_HW_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SP_HW_4"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+        Title="Мой первый Блокнот" Height="628.929" Width="800">
+    <materialDesign:Card>
+        <Grid Height="593" Background="#FF4B7E2F">
+            <Menu Height="25" VerticalAlignment="Top" Background="#FFBDDEE6">
+                <MenuItem Header="Файл">
+                    <MenuItem x:Name="Сохранить_как" Header="Создать" Click="Сохранить_как_Click"/>
+                    <MenuItem x:Name="Открыть" Header="Открыть" Click="Открыть_Click"/>
+                    <MenuItem x:Name="Сохранить" Header="Сохранить" Click="Сохранить_Click"/>
+                    <MenuItem Header="Сохранить как"/>
+                    <Separator />
+                    <MenuItem Header="Параметры страницы"/>
+                    <MenuItem x:Name="Печать" Header="Печать" Click="Печать_Click"/>
+                    <Separator />
+                    <MenuItem x:Name="Выход" Header="Выход" Click="Выход_Click"/>
+                </MenuItem>
+                <MenuItem Header="Правка" >
+                    <MenuItem x:Name="Отменить" Header="Отменить" Click="Отменить_Click"/>
+                    <Separator />
+                    <MenuItem x:Name="Вырезать" Header="Вырезать" Click="Вырезать_Click"/>
+                    <MenuItem x:Name="Копировать" Header="Копировать" Click="Копировать_Click"/>
+                    <MenuItem x:Name="Вставить" Header="Вставить" Click="Вставить_Click"/>
+                    <MenuItem x:Name="Удалить" Header="Удалить" Click="Удалить_Click"/>
+                    <Separator />
+                    <MenuItem x:Name="Найти" Header="Найти ..." Click="Найти_Click"/>
+                    <MenuItem x:Name="Найти_далее" Header="Найти далее" Click="Найти_далее_Click"/>
+                    <MenuItem Header="Заменить ..."/>
+                    <MenuItem Header="Перейти ..."/>
+                    <Separator />
+                    <MenuItem x:Name="Выделить_все" Header="Выделить все" Click="Выделить_все_Click"/>
+                    <MenuItem Header="Время и дата"/>
+                </MenuItem>
+                <MenuItem Header="Формат" >
+                    <MenuItem Header="Перенос по словам"/>
+                    <MenuItem Header="Шрифт"/>
+                </MenuItem>
+                <MenuItem Header="Вид" >
+                    <MenuItem Header="Строка состояния"/>
+                </MenuItem>
+                <MenuItem Header="Справка" >
+                    <MenuItem Header="Посмотреть справку"/>
+                    <Separator />
+                    <MenuItem Header="О программе"/>
+                </MenuItem>
+            </Menu>
+            <RichTextBox x:Name="MyTextBox" HorizontalAlignment="Left" Height="553" Margin="10,30,0,0" VerticalAlignment="Top" Width="773" Background="#FFD4F3D4">
+                <FlowDocument/>
+            </RichTextBox>
+        </Grid>
+    </materialDesign:Card>
+</Window>
